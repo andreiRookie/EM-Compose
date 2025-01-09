@@ -14,14 +14,18 @@ fun ItemsColumn() {
         }
         items(5) { index ->
             Text(text = "Item: $index")
+
 // IllegalStateException: Vertically scrollable component was measured with an infinity
 // maximum height constraints, which is disallowed.
-// One of the common reasons is nesting layouts like LazyColumn and Column(Modifier.verticalScroll())
+// One of the common reasons is nesting layouts like
+// LazyColumn and Column(Modifier.verticalScroll()).
+
 //            LazyColumn() {
 //                items(1) { indexInternal ->
 //                    Text(text = "Item: $indexInternal")
 //                }
 //            }
+
         }
 
         // Add another single item
